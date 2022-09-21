@@ -1,5 +1,7 @@
 package seleniumexamples;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,14 +17,13 @@ public class FBXpath {
 		driver.get("https://www.facebook.com/");
 		driver.findElement(By.linkText("Create New Account")).click();
 		driver.manage().window().maximize();
-		Thread.sleep(1000);
+		//Thread.sleep(2000);
+		driver.manage().timeouts().implicitlyWait(2000, TimeUnit.MILLISECONDS);
 		driver.findElement(By.xpath("//input[@name='firstname']")).sendKeys("Hemi");
 		driver.findElement(By.xpath("//input[@name='lastname']")).sendKeys("Hvt");
-
-		driver.findElement(By.name("reg_email__")).sendKeys("hemi_ycc@gmail.com");
-		driver.findElement(By.name("reg_email_confirmation__")).sendKeys("hemi_ycc@gmail.com");
-		driver.findElement(By.id("password_step_input")).sendKeys("AqwEr@231");
-		
+		driver.findElement(By.xpath("//input[@name='reg_email__']")).sendKeys("hemi_ycc@gmail.com");
+		driver.findElement(By.xpath("//input[@name='reg_email_confirmation__']")).sendKeys("hemi_ycc@gmail.com");
+		driver.findElement(By.xpath("//input[@id='password_step_input']")).sendKeys("AqwEr@231");
 		//driver.findElement(By.name("birthday_day")).sendKeys("12");
 		WebElement day=driver.findElement(By.name("birthday_day"));
 		Select select=new Select(day);
@@ -31,7 +32,7 @@ public class FBXpath {
 		
 		driver.findElement(By.name("birthday_month")).sendKeys("Mar");
 		driver.findElement(By.name("birthday_year")).sendKeys("2000");
-		driver.findElement(By.xpath("/html/body/div[3]/div[2]/div/div/div[2]/div/div/div[1]/form/div[1]/div[7]/span/span[2]/label")).click();
+		driver.findElement(By.xpath("//input[@value='2']")).click();
 		
 		driver.findElement(By.name("websubmit")).click();
 
