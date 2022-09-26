@@ -12,8 +12,9 @@ import org.testng.annotations.AfterSuite;
  
 public class TestNGExampleTest {
  
-@Test
+	@Test
        public void testCase1() {
+		
               System.out.println("in test case 1");
        }
  
