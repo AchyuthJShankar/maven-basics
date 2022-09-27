@@ -11,18 +11,18 @@ import org.testng.asserts.SoftAssert;
 public class HRMTestNG {
   @Test
   public void login() {
-	  System.setProperty("webdriver.chrome.driver", "C:\\Achyuth\\chromedriver.exe");
+	  	System.setProperty("webdriver.chrome.driver", "C:\\Achyuth\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(2000, TimeUnit.MILLISECONDS);
-	  driver.findElement(By.xpath("//input[@name='username']")).sendKeys("Admin");
+		driver.findElement(By.xpath("//input[@name='username']")).sendKeys("Admin");
 		driver.findElement(By.xpath("//input[@name='password']")).sendKeys("admin123");
 		driver.findElement(By.xpath("//div[@class='oxd-form-actions orangehrm-login-action']/button")).click();
   }
   @Test
   public void forgotPwd() {
-	  System.setProperty("webdriver.chrome.driver", "C:\\Achyuth\\chromedriver.exe");
+	  	System.setProperty("webdriver.chrome.driver", "C:\\Achyuth\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 		//String a=driver.getTitle();
@@ -40,7 +40,7 @@ public class HRMTestNG {
   }
   @Test
   public void leaveApp() {
-	  System.setProperty("webdriver.chrome.driver", "C:\\Achyuth\\chromedriver.exe");
+	  	System.setProperty("webdriver.chrome.driver", "C:\\Achyuth\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 		driver.manage().timeouts().implicitlyWait(1000, TimeUnit.MILLISECONDS);
@@ -59,9 +59,9 @@ public class HRMTestNG {
   }
   @Test
   public void employeeSearch() {
-	  System.setProperty("webdriver.chrome.driver", "C:\\Achyuth\\chromedriver.exe");
+	  	System.setProperty("webdriver.chrome.driver", "C:\\Achyuth\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
-	  driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(2000, TimeUnit.MILLISECONDS);
 		driver.findElement(By.name("username")).sendKeys("Admin");
