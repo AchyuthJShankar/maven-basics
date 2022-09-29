@@ -18,7 +18,7 @@ public class FBXpath {
 		driver.findElement(By.linkText("Create New Account")).click();
 		driver.manage().window().maximize();
 		//Thread.sleep(2000);
-		driver.manage().timeouts().implicitlyWait(2000, TimeUnit.MILLISECONDS);
+		
 		driver.findElement(By.xpath("//input[@name='firstname']")).sendKeys("Hemi");
 		driver.findElement(By.xpath("//input[@name='lastname']")).sendKeys("Hvt");
 		driver.findElement(By.xpath("//input[@name='reg_email__']")).sendKeys("hemi_ycc@gmail.com");
