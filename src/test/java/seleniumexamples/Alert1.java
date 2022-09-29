@@ -23,8 +23,8 @@ public class Alert1 {
 		Hdfc.accept();
 		//Hdfc.dismiss();
 		driver.switchTo().defaultContent();// This method will take back to main window mean comes out of the login frame.
-		
-
+		driver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
+		driver.close();
 	}
 
 }
